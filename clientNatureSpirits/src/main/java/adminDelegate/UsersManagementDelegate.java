@@ -2,6 +2,7 @@ package adminDelegate;
 
 
 
+import java.util.List;
 import org.esprit.naturespirits.domain.User;
 import org.esprit.naturespirits.service.NatureSpiritsRemote;
 
@@ -25,4 +26,21 @@ public class UsersManagementDelegate {
 		{
 			getRemote().addUser(user);
 		}
+		public static List<User> findAll() {
+			return getRemote().findAll();
+		}
+
+		public List<User> findBYval(boolean validation_j) {
+			return getRemote().findBYval(validation_j);
+		}
+
+		public void disableUser(boolean validation_j){
+			getRemote().disableUser(validation_j);
+			
+		}
+		public void validateUser(boolean validation_j){
+			getRemote().validateUser(validation_j);
+		}
+
+
 }
