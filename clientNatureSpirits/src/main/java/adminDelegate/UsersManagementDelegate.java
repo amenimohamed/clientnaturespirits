@@ -26,20 +26,25 @@ public class UsersManagementDelegate {
 		{
 			getRemote().addUser(user);
 		}
+		public static void updateUser(User user){
+			getRemote().updateUser(user);
+		}
 		public static List<User> findAll() {
 			return getRemote().findAll();
 		}
-
+        public static User findBYid(int id_user){
+        	return getRemote().findBYid(id_user);
+        }
 		public List<User> findBYval(boolean validation_j) {
 			return getRemote().findBYval(validation_j);
 		}
 
-		public void disableUser(boolean validation_j){
-			getRemote().disableUser(validation_j);
+		public static void disableUser(User user){
+			getRemote().disableUser(user);
 			
 		}
-		public void validateUser(boolean validation_j){
-			getRemote().validateUser(validation_j);
+		public static void validateUser(User user){
+			getRemote().validateUser(user);
 		}
 
 
